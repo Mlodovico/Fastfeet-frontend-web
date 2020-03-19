@@ -51,6 +51,15 @@ export const Content = styled.div`
       margin-right: 20px;
     }
 
+    span {
+      color: #FF0000;
+      align-self: auto;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
     button {
       height: 70px;
       width: 350px;
