@@ -1,11 +1,13 @@
 import { takeLatest, call, put, all } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
 
 import history from '~/services/history';
 import api from '~/services/api';
-import { signInSuccess } from './actions'
+import { signInSuccess, signInFailed } from './actions'
 
 export function* signIn({ payload }) {
-  const { email, password_hash } = payload;
+  try {
+    const { email, password_hash } = payload;
 
   const response = yield call(api.post, 'sessions', {
     email,
@@ -17,7 +19,7 @@ export function* signIn({ payload }) {
   console.tron.log(user);
 
   if(!user.administrator) {
-    console.tron.error('Usuário não tem permissão o suficiente');
+    toast.error('Usuário não tem permissão o suficiente');
     return;
   }
 
@@ -26,6 +28,11 @@ export function* signIn({ payload }) {
   yield put(signInSuccess(token,user));
 
   history.push('orders');
+  }catch (err) {
+    toast.error('Falha na autenticação, verifique seus dados')
+    yield put(signInFailed());
+
+  }
 }
 
 export default all([

@@ -52,6 +52,8 @@ export const Content = styled.div `
     display: row;
     margin-top: 60px;
     margin-left: 200px;
+    margin-block-end: 300px;
+    justify-content: flex-end;
 
     h3 {
       font-family: 'Roboto', sans-serif;
@@ -63,5 +65,15 @@ export const Content = styled.div `
       height: 30px;
       width: 250px;
     }
+
+    button {
+      background: #7159c1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      width: 150px;
+      height: 30px;
+      margin-left: 300px;
   }
+ }
 `;

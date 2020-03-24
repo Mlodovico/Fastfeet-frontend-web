@@ -11,10 +11,10 @@ export default function OrderDashboard() {
           <img src={logo} />
           <strong> | </strong>
 
-          <button class="orderDashboard">Encomendas</button>
-          <button class="deliveruDashboard">Entregadores</button>
-          <button class="recipientDashboard">Destinátario</button>
-          <button class="problemDashboard">Problemas</button>
+          <button class="orderDashboard">ENCOMENTAS</button>
+          <button class="deliveruDashboard">ENTREGADORES</button>
+          <button class="recipientDashboard">DESTINATÁRIOS</button>
+          <button class="problemDashboard">PROBLEMAS</button>
         </Form>
 
         <div>
@@ -25,9 +25,10 @@ export default function OrderDashboard() {
           <Input
             name="search"
             type="search"
-            placeholder="Buscar por Encomendas"
+            placeholder="  Buscar por Encomendas  "
           />
 
+          <button> + CADASTRAR </button>
         </div>
 
       </>
