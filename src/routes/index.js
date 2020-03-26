@@ -18,8 +18,6 @@ import RecipientUpdate from '~/pages/Recipient/RecipientUpdate';
 
 import Problems from '~/pages/Problems';
 
-import Profile from '~/pages/Profile';
-
 export default function Routes() {
   return (
     <Switch>
@@ -34,7 +32,6 @@ export default function Routes() {
       <Route path="/registerRecipient" component={ RecipientRegister } isPrivate />
       <Route path="/registerUpdate" component={ RecipientUpdate } isPrivate />
       <Route path="/problems" component={ Problems } isPrivate />
-      <Route path="/profile" component={ Profile } isPrivate />
     </Switch>
   );
 }
