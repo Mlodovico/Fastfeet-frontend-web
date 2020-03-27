@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Actions from '~/components/Actions';
+import Actions from '~/components/Actions/RecipientActions';
 
 import { Container,
          Input,
