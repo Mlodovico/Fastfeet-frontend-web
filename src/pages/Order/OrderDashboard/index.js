@@ -41,7 +41,7 @@ export default function OrderDashboard() {
             <td>
               <Status>ENTREGUE</Status>
             </td>
-            <Actions> ... </Actions>
+            <Actions />
           </tr>
         </table>
       </div>

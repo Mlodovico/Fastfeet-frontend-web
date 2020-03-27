@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  .orders-content {
+  .delivery-man-content {
     width: 80%;
     margin-left: 2px;
 
@@ -59,11 +59,12 @@ export const Container = styled.div`
       td {
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
+        justify-content: center;
         color: #808080;
         font-weight: bold;
       }
 
-      .orders-table-content {
+      .delivery-man-table-content {
         margin-top: 15px;
         background: #fff;
         border-radius: 40px;
@@ -96,13 +97,6 @@ export const Container = styled.div`
           border-radius: 50px;
           margin-right: 10px;
         }
-
-        span {
-          font-family: 'Roboto', sans-serif;
-          font-size: 14px;
-          font-weight: bold;
-          color: #808080;
-        }
       }
     }
 
@@ -116,23 +110,4 @@ export const Input = styled.input`
   border: none;
   border-radius: 4px;
   margin-bottom: 20px;
-`;
-
-
-
-export const Status = styled.div`
-  height: 25px;
-  width: 120px;
-  font-family: 'Roboto', sans-serif;
-  color: #3CB371;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 5px 24px;
-  margin: 0 auto;
-  background: #98FB98;
-`;
-
-export const Actions = styled.td`
-
 `;
