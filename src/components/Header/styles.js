@@ -32,6 +32,7 @@ export const Content = styled.div`
       font-weight: bold;
       font-family: 'Roboto', sans-serif;
       font-size: 14px;
+      border: none;
       color: #808080;
       margin-left: 15px;
       transition: color 0.5s;
@@ -64,10 +65,11 @@ export const Profile = styled.div`
       color: #333;
     }
 
-    a{
-      display: block;
+    button {
       margin-top: 5px;
       font-size: 15px;
+      border: none;
+      background: #fff;
       color: #7159c1;
     }
   }
