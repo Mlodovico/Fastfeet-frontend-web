@@ -23,7 +23,7 @@ export function* signIn({ payload }) {
     return;
   }
 
-  console.tron.log("Chegou até aqui!")
+  api.defaults.headers.Authorization = `Bearer ${token}`;
 
   yield put(signInSuccess(token,user));
 

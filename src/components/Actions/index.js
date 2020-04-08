@@ -4,7 +4,7 @@ import { FaPencilAlt } from 'react-icons/fa';
 
 import { Container, Badge, OptionsList } from './styles';
 
-
+import history from '~/services/history';
 
 export default function Actions() {
   const [visible, setVisible] = useState(false);
@@ -24,7 +24,9 @@ export default function Actions() {
           <AiFillEye color="#7159c1" size={17} />
           Vizualizar
         </button>
-        <button>
+        <button onClick={() => {
+          history.push();
+        }}>
           <FaPencilAlt color="#0000FF" size={17} />
           Editar
         </button>

@@ -7,6 +7,8 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  background: #D3D3D3;
+
   .delivery-man-content {
     width: 80%;
     margin-left: 2px;
@@ -25,7 +27,7 @@ export const Container = styled.div`
 
     a {
       display: flex;
-      justify-content: center;
+      align-items: center;
       height: 25px;
       padding: 10px 20px;
       font-family: 'Roboto', sans-serif;
@@ -40,6 +42,12 @@ export const Container = styled.div`
 
       &:hover {
         background: ${darken(0.10, '#7159c1')}
+      }
+
+      svg {
+        margin-right: 8px;
+        font-size: 15px;
+        color: #fff;
       }
     }
 
@@ -62,14 +70,16 @@ export const Container = styled.div`
         justify-content: center;
         color: #808080;
         font-weight: bold;
+        border-top: 10px solid #D3D3D3;
+
       }
 
       .delivery-man-table-content {
-        margin-top: 15px;
         background: #fff;
         border-radius: 40px;
 
       }
+
 
       td:first-child {
         border-top-left-radius: 5px;
@@ -85,6 +95,12 @@ export const Container = styled.div`
         text-align: center;
       }
 
+      .action-div {
+        position: relative;
+        border-top: 10px solid #D3D3D3;
+
+      }
+
       td div {
         text-align: center;
         display: flex;
@@ -92,11 +108,31 @@ export const Container = styled.div`
         align-items: center;
 
         img{
-          width: 50px;
+          width: 45px;
           height: 45px;
           border-radius: 50px;
           margin-right: 10px;
         }
+      }
+    }
+
+    .delivery-man-footer {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      background: #D3D3D3;
+
+      button{
+        color: #fff;
+        width:80px;
+        height: 50px;
+        border-radius: 5px;
+        background: #7159c1;
+        border:none;
+        margin-left: 50px;
+        justify-content: space-between;
       }
     }
 

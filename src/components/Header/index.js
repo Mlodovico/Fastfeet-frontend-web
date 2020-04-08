@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { signOut } from '~/store/modules/auth/actions';
+
 import { Container, Content, Profile } from './styles';
 import logo from '~/assets/fastfeet-logo@2x.png';
 
 export default function Header() {
   const dispatch = useDispatch();
-
+  const profile = useSelector(state => state.user.profile);
 
   function handleSignOut() {
     dispatch(signOut())
@@ -30,7 +32,7 @@ export default function Header() {
         <aside>
           <Profile>
             <div>
-              <strong>Murilo Lodovico</strong>
+              <strong>{profile.name}</strong>
               <button type="button"
                       onClick={handleSignOut}>
                 sair do sistema

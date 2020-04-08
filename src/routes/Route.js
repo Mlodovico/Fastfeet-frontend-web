@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect} from 'react-router-dom';
 
+import api from '~/services/api';
 import AuthLayout from '~/pages/_layouts/auth';
 import DefaultLayout from '~/pages/_layouts/default';
 
@@ -12,7 +13,12 @@ export default function RouteWrapper({
   isPrivate= false,
   ...rest
 }) {
-  const { signed } = store.getState().auth;
+  const { signed, token } = store.getState().auth;
+
+  if(token && token.length > 0) {
+    console.log('Checked');
+    api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }
 
   if(!signed && isPrivate){
     return <Redirect to="/" />

@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Actions from '~/components/Actions/RecipientActions';
 
-import { Container,
-        } from './styles';
+import { Container } from './styles';
 
 export default function ProblemDashboard() {
     return <Container>
