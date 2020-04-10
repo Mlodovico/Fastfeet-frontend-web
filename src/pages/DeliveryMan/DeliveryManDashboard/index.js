@@ -5,13 +5,7 @@ import Actions from '~/components/Actions/DeliveryManActions';
 
 import api from '~/services/api'
 
-import {
-  MdAdd,
-  MdSearch,
-  MdEdit,
-  MdDeleteForever,
-  MdRefresh,
-} from 'react-icons/md';
+import { MdAdd } from 'react-icons/md';
 
 import { Container,
          Input,
@@ -35,8 +29,6 @@ export default function DeliveryManDashboard() {
         params: { query, page },
 
       });
-
-      console.log(response);
 
       const data = response.data.map(value => {
         return {

@@ -25,7 +25,7 @@ export const Container = styled.div`
 
     a {
       display: flex;
-      justify-content: center;
+      align-items: center;
       height: 25px;
       padding: 10px 20px;
       font-family: 'Roboto', sans-serif;
@@ -40,6 +40,12 @@ export const Container = styled.div`
 
       &:hover {
         background: ${darken(0.10, '#7159c1')}
+      }
+
+      svg {
+        margin-right: 8px;
+        font-size: 15px;
+        color: #fff;
       }
     }
 
@@ -62,6 +68,7 @@ export const Container = styled.div`
         justify-content: center;
         color: #808080;
         font-weight: bold;
+        border-top: 10px solid #D3D3D3;
       }
 
       .recipient-table-content {
@@ -83,6 +90,12 @@ export const Container = styled.div`
 
       td {
         text-align: center;
+      }
+
+      .action-div {
+        position: relative;
+        border-top: 10px solid #D3D3D3;
+
       }
 
       td div {
