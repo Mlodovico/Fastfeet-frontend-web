@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import Actions from '~/components/Actions/RecipientActions';
+import Actions from '~/components/Actions/ProblemsActions';
 
 import api from '~/services/api';
 

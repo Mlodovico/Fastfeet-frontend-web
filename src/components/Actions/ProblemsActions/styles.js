@@ -13,7 +13,7 @@ export const Badge = styled.button`
 
 export const OptionsList = styled.div`
   position: absolute;
-  width: 120px;
+  width: 200px;
   top: calc(60% + 10px);
   background: #eee;
   display: ${props => props.visible? 'block' : 'none'};
@@ -21,6 +21,7 @@ export const OptionsList = styled.div`
   &::before {
     content: '';
     position: absolute;
+    justify-content: space-between;
     left: calc(50% - 10px);
     top: -10px;
     width: 0;
@@ -32,7 +33,7 @@ export const OptionsList = styled.div`
 
   button {
     display: flex;
-    justify-content: center;
+    align-items: center;
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;

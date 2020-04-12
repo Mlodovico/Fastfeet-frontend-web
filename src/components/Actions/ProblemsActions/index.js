@@ -22,11 +22,11 @@ export default function Actions() {
       <OptionsList visible={visible}>
         <button>
           <FaPencilAlt color="#0000FF" size={17} />
-          Vizualizar
+             Vizualizar
         </button>
         <button>
           <AiFillDelete color="	#FF0000" size={17} />
-          Cancelar encomenda
+             Cancelar encomenda
         </button>
       </OptionsList>
     </Container>
