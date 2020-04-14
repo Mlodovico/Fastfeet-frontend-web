@@ -79,8 +79,8 @@ export default function OrderRegister() {
 
           <h5>Nome do produto</h5>
           <Imput type="product-name"
-                   name="product-name"
-                   placeholder="   Insira o nome do produto"
+                  name="product-name"
+                  placeholder="   Insira o nome do produto"
           />
           </div>
 
