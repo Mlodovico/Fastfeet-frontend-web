@@ -9,30 +9,30 @@ export const Container = styled.div`
   font-family: 'Roboto', sans-serif;
 
   h3 {
-    width: 30%;
+    width: 80%;
   }
 
   .custom-div {
     width: 100%;
-    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
   }
 
   .back-page-button {
-
-    margin-right: 20px;
+    background: red;
+    color: #fff;
     align-items: center;
-    border: none;
+    width: 120px;
+    height: 35px;
     border-radius: 5px;
-    padding: 10px 35px;
+    margin-right: 10px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 18px;
-    background: #808080;
-    color: #fff;
+    font-size: 16px;
     transition: background 0.5s;
 
     &:hover {
-      background: ${darken(0.10, '#808080')}
+      background: ${darken(0.10, 'red')}
     }
 
     svg {
@@ -43,16 +43,16 @@ export const Container = styled.div`
   }
 
   .save-order-button {
-    display: column;
-    border: none;
-    justify-content: baseline;
-    border-radius: 5px;
-    padding: 10px 35px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
     background: #7159c1;
     color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 35px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
     transition: background 0.5s;
 
     &:hover {
@@ -66,62 +66,59 @@ export const Container = styled.div`
     }
   }
 
-  .wrapper {
-    background: #FFF;
-    width: 90%;
-    margin: 0 left;
-    height: 250px;
+  .white-box-custom {
+    background: #fff;
+    height: 400px;
     width: 100%;
-    margin-top: 30px;
-    border-radius: 8px;
-    display: block;
-
-  }
-
-  .box-order-register {
-
     display: flex;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    width: 100%;
 
+    .formatted-borders {
+      background: #fff;
+      width: 80%;
+      height: 370px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 10px;
+      justify-content: space-between;
+
+      .putting-boxs-together{
+        margin-top:50px;
+        display:flex;
+        justify-content: space-between;
+
+        .align-boxs{
+          display: block;
+          justify-content: space-between;
+          width: 100%;
+
+          select{
+            width: 90%;
+            height: 35px;
+            border: none;
+          }
+        }
+      }
+
+      .product-name-div {
+        h4 {
+          margin-top: 100px;
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
-
-  .custom-order-box-select h5 {
-    margin-top: 10px;
-  }
-
-  .custom-order-box-select select {
-    border: none;
-    margin-left: 10px;
-    border-radius: 5px;
-    background: #D3D3D3;
-    color: #808080;
-    width: 90%;
-    padding: 0 30px;
-    height: 36px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  h5 {
-    margin-left: 10px;
-  }
-
 `;
 
 export const Imput = styled.input`
-    justify-content: baseline;
-    margin-left: 10px;
-    height: 36px;
-    background: #D3D3D3;
-    color: #808080;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    width: 60%;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: none;
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+  width: 80%;
+  height:35px;
+  background: #D3D3D3;
+  border-style: groove;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 `;

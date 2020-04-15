@@ -19,16 +19,25 @@ const schema = Yup.object().shape({
 
 
 export default function OrderRegister() {
-  const [ orders, setNewOrders] = useState([]);
+  const [ orders, setOrders] = useState([]);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    async function setNewOrders() {
+    async function loadItems() {
       const response = await api.post('orders', {
         params: { query },
       });
+
+      const data = response.data.map(value => {
+        return {...value};
+      });
+
+      setOrders(data);
+
     }
-  });
+
+    loadItems()
+  }, { query });
 
   /**
    * Precisa finalizar o proceso de cadastramento de
@@ -54,35 +63,45 @@ export default function OrderRegister() {
             <IoIosCheckmark />
             Salvar
           </button>
+        </div>
 
-          </div>
-          <div className="wrapper">
-            <div name="recipient" className="box-order-register">
-              <div className="custom-order-box-select">
-                <h5>Destinátario</h5>
+        <div className="white-box-custom">
+          <div className="formatted-borders">
+            <div className="putting-boxs-together">
+              <div className="align-boxs">
+                <h4>Destinatário</h4>
                 <select>
-                  <option value="0">Destino</option>
-                  <option value="1">Rua Cinira Fonseca de Oliveira</option>
-                  <option value="2">Av Banderias</option>
+                  {orders.map(order => (
+                    <option>
+                      {order.recipients.city},
+                      {order.recipients.street},
+                      {order.recipients.number}
+                    </option>
+                  ))}
                 </select>
+              </div>
+              <div className="align-boxs">
+
+                <h4>Entregador</h4>
+                <select>
+                  {orders.map(order => (
+                    <option>
+                      {order.deliverys.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-            <div name="deliveryman" className="custom-order-box-select">
-              <h5>Entregadores</h5>
-              <select>
-                <option value="0">Entregadores</option>
-                <option value="1">Robson Da Silva</option>
-                <option value="2">Anderson Pereira</option>
-              </select>
+            <div className="product-name-div">
+              <h4>Nome do Produto</h4>
+              <Imput
+                    placeholder="Dígite o nome do Produto"
+                    name="product-name"
+                    type="name"
+                    />
             </div>
           </div>
-
-
-          <h5>Nome do produto</h5>
-          <Imput type="product-name"
-                  name="product-name"
-                  placeholder="   Insira o nome do produto"
-          />
-          </div>
+        </div>
 
         </Form>
       </Container>
