@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
+import { toast } from 'react-toastify';
 import { Form, Input } from '@rocketseat/unform';
 import { IoIosArrowBack, IoIosCheckmark } from 'react-icons/io';
 
@@ -9,6 +10,25 @@ import { Link } from 'react-router-dom';
 export default function RecipientRegister() {
 
   function handleAddRecipient(event) {
+    if(event.name == null || event.name === '') {
+      toast.error('Necessário o preenchimento do nome');
+    }
+    else if (event.street == null || event.street === '') {
+      toast.error('Necessário o preenchimento da rua');
+    }
+    else if (event.city == null || event.city === '') {
+      toast.error('Necessário o preenchimento da cidade');
+    }
+    else if (event.state == null || event.state === '') {
+      toast.error('Necessário o preenchimento do estado');
+    }
+    else if (event.postal_code == null || event.postal_code === '') {
+      toast.error('Necessário o preenchimento do CEP');
+    }
+    else if (event.number == null || event.number === '') {
+      toast.error('Necessário o preenchimento do número');
+    }
+
     console.log(event);
   }
 
@@ -56,6 +76,7 @@ export default function RecipientRegister() {
                   <Input className="complement-input"
                          type="text"
                          name="complement"
+                         placeholder=" Opcional"
                          />
                 </div>
               </div>

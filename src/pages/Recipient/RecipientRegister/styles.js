@@ -154,7 +154,7 @@ export const Container = styled.div`
             width: 95%;
             border: none;
             border-radius: 5px;
-            background: #D3D3D3
+            background: #D3D3D3;
           }
         }
 
