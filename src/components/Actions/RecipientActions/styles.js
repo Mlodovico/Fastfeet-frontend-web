@@ -16,6 +16,7 @@ export const OptionsList = styled.div`
   width: 120px;
   top: calc(60% + 10px);
   background: #eee;
+  z-index: 1;
   display: ${props => props.visible? 'block' : 'none'};
 
   &::before {

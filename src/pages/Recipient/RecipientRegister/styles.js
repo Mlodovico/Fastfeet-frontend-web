@@ -49,53 +49,148 @@ export const Container = styled.div`
     }
   }
 
-  .custom-div {
-    width: 100%;
-    height: 500px;
-    margin-top: 40px;
+  .white-box-custom {
     background: #fff;
-    border-radius: 5px;
-  }
+    width: 100%;
+    height: 400px;
+    display: flex;
 
-  .custom-div-template {
-    margin-right: 30px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 30px;
-  }
-
-    .div-custom-name {
+    .formatted-borders {
       width: 100%;
-      height: 100px;
+      height: 450px;
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 30px;
 
-      h3 {
-        margin-bottom: 20px;
-        font-size: 15px;
+      .div-name {
+        height: 70px;
+        margin-bottom: 30px;
+
+        h4 {
+          margin-bottom: 10px;
+        }
+
+        .name-input {
+          background: #D3D3D3;
+          height: 40px;
+          width: 90%;
+          border: none;
+          border-radius: 5px;
+        }
       }
 
-      input {
-        height: 45px;
-        width: 80%;
-        border-radius: 5px;
-        align-items: center;
+      .adress-one {
+        display: flex;
         margin-top: 10px;
-        border-style: groove;
+        width: 90%;
+        height: 70px;
+
+        .street-div {
+          width: 50%;
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          .street-input {
+            height: 40px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background: #D3D3D3;
+          }
+        }
+
+        .number-div {
+          margin-left: 10px;
+          width: 20%;
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          .number-input {
+            height: 40px;
+            width: 95%;
+            border: none;
+            border-radius: 5px;
+            background: #D3D3D3;
+          }
+        }
+
+        .complement-div {
+          width: 30%;
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          .complement-input {
+            height: 40px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background: #D3D3D3;
+          }
+        }
+      }
+
+      .adress-two {
+        display: flex;
+        margin-top: 40px;
+        width: 90%;
+        height: 70px;
+
+        .city-div {
+          width: 33%;
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          .city-input {
+            height: 40px;
+            width: 95%;
+            border: none;
+            border-radius: 5px;
+            background: #D3D3D3
+          }
+        }
+
+        .country-div {
+          width: 33%;
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          .country-input {
+            height: 40px;
+            width: 95%;
+            border: none;
+            border-radius: 5px;
+            background: #D3D3D3
+          }
+        }
+
+        .postal-code-div {
+          width: 33%;
+
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          .postal-code-input {
+            height: 40px;
+            width: 95%;
+            border: none;
+            border-radius: 5px;
+            background: #D3D3D3
+          }
+        }
       }
     }
+  }
 
-    .custom-div-adress {
-      background:red;
-      height: 390px;
-
-      h5 {
-        margin-bottom: 10px;
-      }
-
-      input{
-        height: 45px;
-        width: 50%;
-        border-radius: 5px;
-        border-style: groove;
-      }
-    }
 `;

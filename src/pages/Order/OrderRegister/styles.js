@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { Input as UInput } from '@rocketseat/unform';
 
 export const Container = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
@@ -91,10 +92,26 @@ export const Container = styled.div`
           justify-content: space-between;
           width: 100%;
 
+          h4 {
+            margin-bottom: 20px;
+          }
+
           select{
             width: 90%;
             height: 35px;
             border: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            background: #D3D3D3;
+
+            option {
+              font-family: 'Roboto', sans-serif;
+              font-family: 'Roboto', sans-serif;
+              font-weight: bold;
+              font-size: 15px;
+              background: #D3D3D3;
+            }
           }
         }
       }
@@ -109,7 +126,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Imput = styled.input`
+export const Input = styled(UInput)`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
   width: 80%;
